@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="quote">
+        <div>
+            <em>But at least they never miss an opportunity to miss an opportunity - Sherlock Holmes</em>
+            <area shape="rect" id="1">
+            <area shape="rect" id="2">
+            <area shape="rect" id="3">
+        </div>
+    </section>
+
+    <section class="footer">
+
+    </section>
+
+</body>
+
+</html>
+
+* {
+    font-family: sans-serif;
+}
+
+section.quote {
+    padding: 25vh;
+    background-color: pink;
+}
+
+.quote div{
+    border: solid;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    background-color: white;
+}
+
+area {
+   width: 50px;
+   height: 50px;
+   background-color: black;
+}
+
+    /* For image
+    background-image: url('./resources/rangerBuddy.JPG');
+    background-size: cover;
+    background-position-y: 32%;
+    background-position-x: right;
+    */
+
+    /*filter: blur(3px); */
+
+    /*
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+    margin-bottom: -5vw;
+    */

@@ -1,85 +1,93 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    padding: 0;
-    margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
-.header {
-    background-color: #708da5;
-    color: #fff;
+body {
+    margin: 0px;
 }
 
-.header h1 {
-    text-align: center;
-    padding-top: 20px;
+.home {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: whitesmoke;
+    position: relative;
 }
 
-.nav-links ul {
-    text-align: center;
-}
-
-.nav-links li {
-    list-style: none;
+.home a {
     display: inline-block;
-    margin: 8px 12px;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px 20px;
 }
 
-/* ----Resume section---- */
-
-.resume {
-    width: 80vw;
-    position: relative;
-    left: 10vw;
+.home a:hover {
+    background-color: lightgrey;
 }
 
-.resume h2 {
-    width: 100px;
-    text-align: center;
-    margin: 40px auto;
-    font-weight: 400;
-    border: 1px solid #000;
+.name {
+    margin: 25vh auto 0;
+    width: fit-content;
+    padding: 25px 55px;
+    border: solid;
+    /* margin-top: 20%;*/
 }
 
-.entry h4, .entry p {
+.name h3, .name p {
     display: block;
-    margin-bottom: 20px;
+    width: fit-content;
+    margin: 20px auto;
 }
 
-.entry li {
-    margin: 10px;
-    position: relative;
-    left: 25px;
+.name h3 {
+    font-size: 60px;
 }
-
-.resume h3 {
-    font-weight: 400;
-    margin: 20px 0;
-}
-
-.entry {
-    margin: 50px 0;
-}
-
-/* ----About Me---- */
 
 .footer {
-    width: 100%;
-    text-align: center;
-    background-color: #708da5;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(1, 75, 124);
+
+    /* Footer is 20% of total page height */
+    height: 15vh;
+    width: 90vw;
+    padding: 5vh 5vw;
+    z-index: 2;
+
+    clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 100%);
+
+    color: white;
+}
+
+.footer h4, .footer p {
+    width: fit-content;
+    margin: auto;
+    font-size: 20px;
 }
 
 .footer h4 {
-    font-weight: 400;
-    margin-top: 40px;
-    padding-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
-.footer p {
-    padding-bottom: 30px;
+.footer img {
+    background-color: white;
+    display: inline-block;
+    padding: 10px;
+    margin: 0px 20px;
+    border-radius: 50%;
+    
+    width: 25px;
+    height: 25px;
 }
 
-.list li {
-    margin: 10px;
+#instagram {
+    width: 20px;
+    height: 20px;
+    padding: 15px
+}
+
+.footer div {
+    padding: auto;
+    width: fit-content;
+    margin: 15px auto;
 }
