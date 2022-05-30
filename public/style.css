@@ -3,25 +3,36 @@
 }
 
 body {
+    background-color: whitesmoke;
     margin: 0px;
 }
 
 .home {
     width: 100vw;
     height: 100vh;
+    margin-bottom: -25vh;
 
-    background-color: whitesmoke;
     position: relative;
 }
 
-.home a {
+nav {
+    position: sticky;
+    top: 0; /* Necessary for sticky position to work */
+    
+    background-color: whitesmoke; /*Defaults to transparent if on top of an element that already has a background color */
+}
+
+nav a {
+    color: black;
+    text-decoration: none; /* Gets rid of default underline */
+
     display: inline-block;
     font-weight: 500;
     font-size: 20px;
     padding: 10px 20px;
 }
 
-.home a:hover {
+nav a:hover {
     background-color: lightgrey;
 }
 
@@ -43,9 +54,8 @@ body {
     font-size: 60px;
 }
 
+/* Footer formatting */
 .footer {
-    position: fixed;
-    bottom: 0;
     background-color: rgb(1, 75, 124);
 
     /* Footer is 20% of total page height */
@@ -90,4 +100,25 @@ body {
     padding: auto;
     width: fit-content;
     margin: 15px auto;
+}
+
+
+/* Resume formatting */
+.resume h2 {
+    border: solid;
+
+    width: fit-content;
+    padding: 0 100px;
+    margin: 50px auto 0;
+}
+
+.resume div, .resume h3 {
+    width: 80vw;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.resume h3 {
+    font-size: 30px;
+    margin-top: 35px;
 }
