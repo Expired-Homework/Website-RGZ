@@ -152,3 +152,39 @@ nav a:hover {
 #extracurriculars {
     margin-left: 10vw;
 }
+
+/* Projects site */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+
+    box-sizing: border-box;
+    height: 100vh - 44px;
+    margin: 40px;
+}
+
+.tile {
+    background-color:rgb(1, 75, 124);
+    color: white;
+    border-radius: 10px;
+
+    height: 25vh;
+    position: relative;
+}
+
+.tile a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 24px;
+}
