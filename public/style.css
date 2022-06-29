@@ -1,18 +1,19 @@
-* {
-    font-family: 'Raleway', sans-serif;
+:root {
+    /* Colors */
+    --navy-blue: rgb(1, 75, 124); 
+    /* Font */
+    --ff-primary: 'Raleway', sans-serif;
 }
 
 body {
+    font-family: var(--ff-primary);
+    box-sizing: border-box;
+
     background-color: whitesmoke;
     margin: 0px;
-}
 
-.home {
     width: 100vw;
     height: 100vh;
-    margin-bottom: -25vh;
-
-    position: relative;
 }
 
 nav {
@@ -36,14 +37,6 @@ nav a:hover {
     background-color: lightgrey;
 }
 
-.name {
-    margin: 25vh auto 0;
-    width: fit-content;
-    padding: 25px 55px;
-    border: solid;
-    /* margin-top: 20%;*/
-}
-
 .name h3, .name p {
     display: block;
     width: fit-content;
@@ -56,11 +49,12 @@ nav a:hover {
 
 /* Footer formatting */
 .footer {
-    background-color: rgb(1, 75, 124);
+    background-color: var(--navy-blue);
+    position: fixed;
+    bottom: 0;
 
-    /* Footer is 20% of total page height */
     height: 15vh;
-    width: 90vw;
+    width: 100%;
     padding: 5vh 5vw;
     z-index: 2;
 
@@ -125,7 +119,7 @@ nav a:hover {
 .resume h2 {
     font-size: 30px;
     margin-top: 35px;
-    color:rgb(1, 75, 124);
+    color: var(--navy-blue);
 }
 
 .resume .sub{
@@ -154,7 +148,7 @@ nav a:hover {
 }
 
 /* Projects site */
-
+/*
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -164,9 +158,10 @@ main {
     height: 100vh - 44px;
     margin: 40px;
 }
+*/
 
 .tile {
-    background-color:rgb(1, 75, 124);
+    background-color:var(--navy-blue);
     color: white;
     border-radius: 10px;
 
@@ -187,4 +182,20 @@ main {
     text-decoration: none;
 
     font-size: 24px;
+}
+
+/* 2022-06-29 */
+main {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    padding: auto 0;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
 }
