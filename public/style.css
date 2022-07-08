@@ -37,6 +37,25 @@ nav a:hover {
     background-color: lightgrey;
 }
 
+main {
+    position: fixed;
+    top: 40vh;
+    width: 100vw;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    padding: auto 0;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .name h3, .name p {
     display: block;
     width: fit-content;
@@ -47,20 +66,26 @@ nav a:hover {
     font-size: 60px;
 }
 
+.name {
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 5px 5px var(--navy-blue);
+}
+
 /* Footer formatting */
 .footer {
     background-color: var(--navy-blue);
-    position: fixed;
-    bottom: 0;
-
     height: 15vh;
     width: 100%;
     padding: 5vh 5vw;
     z-index: 2;
-
     clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 100%);
-
     color: white;
+}
+
+.fix {
+    position: fixed;
+    bottom: 0;
 }
 
 .footer h4, .footer p {
@@ -184,18 +209,8 @@ main {
     font-size: 24px;
 }
 
-/* 2022-06-29 */
-main {
-    display: flex;
-    gap: 5rem;
-    justify-content: center;
-    align-items: center;
-    padding: auto 0;
-}
-
-img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 50%;
+@media (max-width: 1000px) { /* Need to include meta tag for viewport to work */
+    main{
+        flex-direction: column;
+    }
 }

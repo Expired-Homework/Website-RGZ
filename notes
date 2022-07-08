@@ -15,11 +15,12 @@ Change menu item hover from color change to underline
 Make colors the same
 Later create a custom icon and some sort of branding
 Some sort of rotational image on home page
-Better compatibility on mobile interface / any screen size
+Better compatibility on mobile interface / any screen size (w footer offset by percent of vh)
 Add bitmoji sideEye to footer
 Add image twirling or effect of some sort to the home page
 Fields: home, resume, gallery, quote of the week (eventually be able to change this on phone w web app), about me (Spotify playlists? | Contain a contact me form [anonymous, work w databases])
 Add domain of www.ryanzipprich.com to website
+Figure out how to type emojis in the terminal
 
 Allow for personal website to have form for people to submit feedback about you and allow it be anonymous, anonymous answers are accepted once per week per IP address
 
