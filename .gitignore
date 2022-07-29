@@ -1,3 +1,8 @@
+resources
+notesToSelf
+
+# Everything below this comment was added automatically by firebase
+
 # Logs
 logs
 *.log

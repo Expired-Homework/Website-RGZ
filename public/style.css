@@ -1,216 +1,244 @@
 :root {
-    /* Colors */
-    --navy-blue: rgb(1, 75, 124); 
-    /* Font */
-    --ff-primary: 'Raleway', sans-serif;
+  /* Colors */
+  --navy-blue: rgb(1, 75, 124);
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --ff-primary: "Raleway", sans-serif;
 }
 
 body {
-    font-family: var(--ff-primary);
-    box-sizing: border-box;
+  font-family: var(--ff-primary);
+  box-sizing: border-box;
 
-    background-color: whitesmoke;
-    margin: 0px;
+  background-color: whitesmoke;
+  margin: 0px;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
+/* Nav formatting */
 nav {
-    position: sticky;
-    top: 0; /* Necessary for sticky position to work */
-    
-    background-color: whitesmoke; /*Defaults to transparent if on top of an element that already has a background color */
-}
+  position: sticky;
+  top: 0; /* Necessary for sticky position to work */
 
+  background-color: whitesmoke; /*Defaults to transparent if on top of an element that already has a background color */
+}
 nav a {
-    color: black;
-    text-decoration: none; /* Gets rid of default underline */
+  color: black;
+  text-decoration: none; /* Gets rid of default underline */
 
-    display: inline-block;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 10px 20px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 20px;
 }
-
 nav a:hover {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 
 main {
-    position: fixed;
-    top: 40vh;
-    width: 100vw;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 5rem;
-    justify-content: center;
-    align-items: center;
-    padding: auto 0;
+  position: fixed;
+  top: 40vh;
+  width: 100vw;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: auto 0;
 }
 
 img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.name h3, .name p {
-    display: block;
-    width: fit-content;
-    margin: 20px auto;
+.name h3,
+.name p {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
 }
 
 .name h3 {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .name {
-    padding: 20px;
-    border: 2px solid black;
-    box-shadow: 5px 5px var(--navy-blue);
+  padding: 20px;
+  border: 2px solid black;
+  box-shadow: 5px 5px var(--navy-blue);
 }
 
 /* Footer formatting */
 .footer {
-    background-color: var(--navy-blue);
-    height: 15vh;
-    width: 100%;
-    padding: 5vh 5vw;
-    z-index: 2;
-    clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 100%);
-    color: white;
+  box-sizing: border-box;
+  background-color: var(--navy-blue);
+  width: 100%;
+  color: white;
+  position: fixed;
+  bottom: 0;
 }
-
-.fix {
-    position: fixed;
-    bottom: 0;
+.footer::before {
+  background: inherit;
+  content: "";
+  height: 5vw;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-98%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
-
-.footer h4, .footer p {
-    width: fit-content;
-    margin: auto;
-    font-size: 20px;
+.footer .text {
+  padding: 0;
 }
-
-.footer h4 {
-    margin-top: 10px;
+.footer .text * {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 5px;
 }
-
-.footer img {
-    background-color: white;
-    display: inline-block;
-    padding: 10px;
-    margin: 0px 20px;
-    border-radius: 50%;
-    
-    width: 25px;
-    height: 25px;
+.footer > div {
+  padding-bottom: 30px;
 }
-
-#instagram {
-    width: 20px;
-    height: 20px;
-    padding: 15px
+#socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-
-.footer div {
-    padding: auto;
-    width: fit-content;
-    margin: 15px auto;
+#socials div {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  background: white;
+  border-radius: 50%;
 }
-
+#socials div img {
+  padding: 10px;
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+}
 
 /* Resume formatting */
 .resume h1 {
-    border: solid;
+  border: solid;
 
-    width: fit-content;
-    padding: 0 100px;
-    margin: 50px auto 0;
+  width: fit-content;
+  padding: 0 100px;
+  margin: 50px auto 0;
 }
-
-.resume div, .resume h2 {
-    width: 80vw;
-    height: fit-content;
-    margin: 0 auto;
-}
-
-.resume div {
-    margin-bottom: 35px;
-}
-
+.resume div,
 .resume h2 {
-    font-size: 30px;
-    margin-top: 35px;
-    color: var(--navy-blue);
+  width: 80vw;
+  height: fit-content;
+  margin: 0 auto;
 }
-
-.resume .sub{
-    margin-left: 5vw;
+.resume div {
+  margin-bottom: 35px;
 }
-
+.resume h2 {
+  font-size: 30px;
+  margin-top: 35px;
+  color: var(--navy-blue);
+}
+.resume .sub {
+  margin-left: 5vw;
+}
 .resume li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
-
 .resume p {
-    margin: 0;
+  margin: 0;
 }
-
 .resume h3 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
-#extracurriculars, #accomplishments {
-    display: inline-block;
-    width: 40vw;
+#extracurriculars,
+#accomplishments {
+  display: inline-block;
+  width: 40vw;
 }
-
 #extracurriculars {
-    margin-left: 10vw;
+  margin-left: 10vw;
 }
 
-/* Projects site */
-/*
-main {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-
-    box-sizing: border-box;
-    height: 100vh - 44px;
-    margin: 40px;
-}
-*/
+/* Projects site formatting */
 
 .tile {
-    background-color:var(--navy-blue);
-    color: white;
-    border-radius: 10px;
+  background-color: var(--navy-blue);
+  color: white;
+  border-radius: 10px;
 
-    height: 25vh;
-    position: relative;
+  height: 25vh;
+  position: relative;
 }
-
 .tile a {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
-    color: white;
-    text-decoration: none;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
 
-    font-size: 24px;
+  color: white;
+  text-decoration: none;
+
+  font-size: 24px;
 }
 
-@media (max-width: 1000px) { /* Need to include meta tag for viewport to work */
-    main{
-        flex-direction: column;
-    }
+/* Media query */
+@media (max-width: 1000px) {
+  /* Need to include meta tag for viewport to work */
+  main {
+    flex-direction: column;
+  }
+}
+
+/* 404 Formatting */
+#message {
+  background: var(--warning);
+  width: 50%;
+  border-radius: 15px;
+  padding: 10px;
+  color: var(--drak);
+  border: 2px solid var(--dark);
+}
+
+/* Global Formatting */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.text-center {
+  text-align: center;
 }
