@@ -21,6 +21,7 @@ body {
 
 nav {
   position: absolute;
+  z-index: 2;
   top: 50px;
   left: 50px;
 }
@@ -32,10 +33,47 @@ nav a {
   text-decoration: none;
   min-width: 100px;
   text-align: center;
+  line-height: 50px;
 }
 
-#homePic {
+nav a:hover {
+  background-color: var(--gray);
+}
+
+#index-pic {
   height: 100vh;
+}
+
+#index-top-shape,
+#index-bottom-shape {
+  width: fit-content;
+  position: absolute;
+  right: 0px;
+  transform: translateX(50%);
+}
+
+#index-top-shape {
+  align-items: start;
+  top: 0px;
+}
+
+#index-bottom-shape {
+  align-items: end;
+  bottom: 0px;
+}
+
+#index-top-shape *,
+#index-bottom-shape * {
+  width: 30px;
+  display: inline-block;
+}
+
+#index-name-box {
+  width: 550px;
+  height: 180px;
+  padding: 50px;
+  border-radius: 130px;
+  border: solid 2px;
 }
 
 /* -----Global Styles----- */
@@ -45,12 +83,19 @@ nav a {
   justify-content: center;
 }
 
-.text-heading {
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.text-heading,
+h1 {
   font-size: 36px;
   font-weight: 800;
 }
 
-.text-subtitle {
+.text-subtitle,
+h2 {
   font-size: 20px;
   font-weight: 700;
 }
@@ -64,4 +109,21 @@ nav a {
   font-size: 8px;
   font-style: italic;
   font-weight: 300;
+}
+
+/*Colors*/
+.blue {
+  background-color: var(--blue);
+}
+.yellow {
+  background-color: var(--yellow);
+}
+.brown {
+  background-color: var(--brown);
+}
+.light-brown {
+  background-color: var(--light-brown);
+}
+.gray {
+  background-color: var(--gray);
 }
