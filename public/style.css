@@ -17,6 +17,7 @@
 body {
   font-family: var(--ff-primary);
   margin: 0;
+  box-sizing: border-box;
 }
 
 nav {
@@ -76,6 +77,36 @@ nav a:hover {
   border: solid 2px;
 }
 
+#_404-shape {
+  position: absolute;
+}
+
+#_404-shape div,
+#_404-shape div div {
+  position: relative;
+}
+
+#_404-shape div {
+  width: min(50vw, 70vh);
+}
+
+#_404-shape div div {
+  position: absolute;
+}
+
+#_404-error-box {
+  position: relative;
+  aspect-ratio: unset;
+  height: fit-content;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#_404-error-box * {
+  padding: 0px 20px;
+}
+
 /* -----Global Styles----- */
 .flex-container {
   display: flex;
@@ -109,6 +140,15 @@ h2 {
   font-size: 8px;
   font-style: italic;
   font-weight: 300;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
 }
 
 /*Colors*/
