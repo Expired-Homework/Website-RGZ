@@ -77,6 +77,34 @@ nav a:hover {
   border: solid 2px;
 }
 
+#resume-title {
+  margin-top: 100px;
+}
+
+#resume-content * {
+  display: inline-block;
+  margin: 20px;
+}
+
+#resume-shape {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  transform: translate(28.7%, -8.8%);
+}
+
+#resume-shape * {
+  position: absolute;
+}
+
+#resume-shape img {
+  width: 34.9%;
+  aspect-ratio: 5/9;
+  border-radius: 28.8%;
+  top: 25.9%;
+  left: 19.7%;
+}
+
 #_404-shape {
   position: absolute;
 }
