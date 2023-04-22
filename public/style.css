@@ -23,18 +23,18 @@ body {
 nav {
   position: absolute;
   z-index: 2;
-  top: 50px;
-  left: 50px;
+  top: 3.125rem;
+  left: 3.125rem;
 }
 
 nav a {
+  box-sizing: border-box;
   display: inline-block;
-  height: 50px;
   color: black;
   text-decoration: none;
-  min-width: 100px;
+  min-width: 6.25rem;
   text-align: center;
-  line-height: 50px;
+  padding: 0.5rem;
 }
 
 nav a:hover {
@@ -42,7 +42,11 @@ nav a:hover {
 }
 
 #index-pic {
-  height: 100vh;
+  object-fit: cover;
+  /* object-position: center; */
+  width: 40%;
+  height: 100%;
+  flex-shrink: 4;
 }
 
 #index-top-shape,
@@ -51,6 +55,7 @@ nav a:hover {
   position: absolute;
   right: 0px;
   transform: translateX(50%);
+  height: 40%;
 }
 
 #index-top-shape {
@@ -65,32 +70,52 @@ nav a:hover {
 
 #index-top-shape *,
 #index-bottom-shape * {
-  width: 30px;
+  width: min(1.875rem, 5vw);
   display: inline-block;
 }
 
 #index-name-box {
-  width: 550px;
-  height: 180px;
+  width: 60ch;
   padding: 50px;
+  margin-inline: 3.125rem;
   border-radius: 130px;
   border: solid 2px;
 }
 
-#resume-title {
-  margin-top: 100px;
+#resume-content {
+  /* Was here for when this was a flexbox
+  align-items: start; */
+  grid-template-columns: 3fr 7fr;
+  margin-inline: 3.125rem;
+  column-gap: 2.5rem;
+  justify-content: center;
+  max-width: 100ch;
 }
 
-#resume-content * {
-  display: inline-block;
-  margin: 20px;
+#resume-content > * {
+  background: var(--gray);
+  padding: 1.25rem;
+}
+
+#resume-content > div:nth-child(odd) {
+  /* Applying text-subtitle to left column */
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#resume-content > div:nth-child(even) {
+  /* Applying text-subtitle to right column */
+  font-size: 16px;
+  font-weight: 500;
 }
 
 #resume-shape {
+  height: 40%;
   position: fixed;
   top: 0px;
   right: 0px;
   transform: translate(28.7%, -8.8%);
+  z-index: -1;
 }
 
 #resume-shape * {
@@ -100,6 +125,7 @@ nav a:hover {
 #resume-shape img {
   width: 34.9%;
   aspect-ratio: 5/9;
+  object-fit: cover;
   border-radius: 28.8%;
   top: 25.9%;
   left: 19.7%;
@@ -142,9 +168,21 @@ nav a:hover {
   justify-content: center;
 }
 
+.grid-container {
+  display: grid;
+}
+
 .full-screen {
   width: 100vw;
   height: 100vh;
+}
+
+.page-start {
+  margin-top: 6.25rem;
+}
+
+.page-end {
+  margin-bottom: 6.25rem;
 }
 
 .text-heading,
@@ -160,7 +198,7 @@ h2 {
 }
 
 .text-body {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -195,3 +233,5 @@ h2 {
 .gray {
   background-color: var(--gray);
 }
+
+/*Components*/
