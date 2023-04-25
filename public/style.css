@@ -24,7 +24,7 @@ nav {
   position: absolute;
   z-index: 2;
   top: 3.125rem;
-  left: 3.125rem;
+  padding-inline: 3.125rem;
 }
 
 nav a {
@@ -41,11 +41,24 @@ nav a:hover {
   background-color: var(--gray);
 }
 
+#index-content {
+  justify-content: space-between;
+}
+
+#index-content > * {
+  height: 100%;
+}
+
+#index-content > div {
+  position: relative;
+  width: 60%;
+  flex-shrink: 6;
+}
+
 #index-pic {
   object-fit: cover;
   /* object-position: center; */
   width: 40%;
-  height: 100%;
   flex-shrink: 4;
 }
 
@@ -85,10 +98,13 @@ nav a:hover {
 #resume-content {
   /* Was here for when this was a flexbox
   align-items: start; */
+  box-sizing: border-box;
   grid-template-columns: 3fr 7fr;
-  margin-inline: 3.125rem;
+  padding-inline: 3.125rem;
+  margin: 0 auto;
   column-gap: 2.5rem;
   justify-content: center;
+  /* max-width: min(100ch, 100% - 6.25rem); */
   max-width: 100ch;
 }
 
@@ -110,11 +126,11 @@ nav a:hover {
 }
 
 #resume-shape {
-  height: 40%;
+  height: min(40vh, 40vw);
   position: fixed;
   top: 0px;
   right: 0px;
-  transform: translate(28.7%, -8.8%);
+  /* transform: translate(28.7%, -8.8%); */
   z-index: -1;
 }
 
@@ -124,7 +140,6 @@ nav a:hover {
 
 #resume-shape img {
   width: 34.9%;
-  aspect-ratio: 5/9;
   object-fit: cover;
   border-radius: 28.8%;
   top: 25.9%;
@@ -159,6 +174,17 @@ nav a:hover {
 
 #_404-error-box * {
   padding: 0px 20px;
+}
+
+/* -----Specific Styles----- */
+
+.resume-entries {
+  display: grid;
+  gap: 2rem;
+}
+
+li:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 /* -----Global Styles----- */
@@ -235,3 +261,44 @@ h2 {
 }
 
 /*Components*/
+
+/* -----Media Queries----- */
+@media (max-width: 700px), (max-height: 550px) {
+  #index-content {
+    flex-direction: column;
+  }
+
+  #index-content > div {
+    width: 100%;
+  }
+
+  #index-name-box {
+    margin-block: 6.25rem;
+  }
+
+  #index-pic {
+    width: 100%;
+  }
+
+  #index-top-shape {
+    left: 0px;
+    top: auto;
+    bottom: 0px;
+    transform: none;
+    transform: translate(5%, 50%) rotate(-90deg);
+  }
+
+  #index-top-shape,
+  #index-bottom-shape {
+    height: 40vw;
+  }
+
+  #index-bottom-shape {
+    transform: translate(-5%, 50%) rotate(-90deg);
+  }
+
+  #resume-content {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
