@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Form Submission - RGZ</title>
+
+    <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex-container flex-vert" style="height: 100vh">
+    <nav class="text-subtitle" style="align-self: flex-start">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+    <h1 class="text-center page-start">Form Submission</h1>
+    <div class="flex-container" style="flex-grow: 1">
+      <div
+        class="flex-container flex-vert blue text-white"
+        style="flex-grow: 0; flex-shrink: 1; padding: 2rem; margin: 0 2rem"
+      >
+        <div>
+          <h2 style="display: inline-block">Name:</h2>
+          <input type="text" style="display: inline-block" />
+        </div>
+        <h2 style="display: inline-block">Comments:</h2>
+        <textarea name="comments" id="" cols="30" rows="10"></textarea>
+        <button onclick="SendEmail()" class="text-subtitle">Send Email</button>
+      </div>
+    </div>
+
+    <script src="formSubmission.js"></script>
+  </body>
+</html>

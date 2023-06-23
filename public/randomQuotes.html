@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Random Quotes - RGZ</title>
+
+    <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex-container flex-vert" style="height: 100vh">
+    <nav class="text-subtitle" style="align-self: flex-start">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+    <h1 class="text-center page-start">Random Quotes</h1>
+    <div class="flex-container" style="flex-grow: 1">
+      <div
+      class="flex-container flex-vert blue text-white"
+      style="flex-grow: 0; flex-shrink: 1; padding: 2rem; margin: 0 2rem"
+      >
+      <h2 class="text-center" id="random-quote" style="max-width: 50ch; min-width: 25ch">_</h2>
+        <button onclick="NewQuote()" class="text-subtitle">New Quote</button>
+      </div>
+    </div>
+    
+    
+    <script type="module" src="randomQuotes.js"></script>
+  </body>
+  </html>
