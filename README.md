@@ -1,4 +1,4 @@
-# <span><img src="./public/assets/bitmoji/smile.PNG" style="height:100px;width:100px;position:relative;top:30px;"/></span> Ryan Zipprich's Personal Website
+# <span><img src="./public/assets/icons/bitmoji/smile.ico" style="height:100px;width:100px;position:relative;top:30px;"/></span> Ryan Zipprich's Personal Website
 
 ### Access
 
