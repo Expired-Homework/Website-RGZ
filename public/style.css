@@ -43,15 +43,24 @@ nav a:hover {
 
 nav button {
   display: none;
-  width: 4rem;
+  width: 3rem;
   border: none;
   background: none;
+  display: none;
+  padding: 0;
+  /* display: flex; */
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 nav button span {
   width: 100%;
   height: 0.5rem;
   background: black;
+  width: 100%;
+  min-height: 0.5rem;
+  background: black;
+  border-radius: 0.25rem;
 }
 
 a {
@@ -324,6 +333,31 @@ h2 {
   color: white;
 }
 
+
+.full-fixed-screen {
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-fixed-screen > * {
+  padding: 3.125rem;
+}
+
+.hide { 
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 /*Components*/
 
 /* -----Media Queries----- */
@@ -354,15 +388,15 @@ h2 {
     width: 100%;
   }
 
-  nav button {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-    margin: 0;
-  }
-
   nav a {
     display: none;
+  }
+
+  nav button {
+    display: flex;
+  }
+
+  #projects-content {
+    grid-template-columns: 1fr 1fr;
   }
 }

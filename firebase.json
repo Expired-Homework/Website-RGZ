@@ -5,8 +5,8 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "formSubmission.html",
-      "formSubmission.js"
+      "**/formSubmission.html",
+      "**/formSubmission.js"
     ]
   }
 }
