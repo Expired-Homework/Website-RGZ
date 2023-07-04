@@ -43,14 +43,14 @@ nav a:hover {
 
 nav button {
   display: none;
-  width: 3rem;
+  width: 2rem;
+  aspect-ratio: 2rem;
   border: none;
   background: none;
-  display: none;
   padding: 0;
   /* display: flex; */
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 nav button span {
@@ -70,6 +70,16 @@ a {
 
 button {
   padding: 1rem;
+}
+
+form {
+  padding: 2rem;
+  margin: 0 2rem;
+  display: grid;
+}
+
+textarea {
+  font-family: var(--ff-primary);
 }
 
 #index-content {
@@ -135,8 +145,7 @@ button {
   margin: 0 auto;
   column-gap: 2.5rem;
   justify-content: center;
-  max-width: min(150ch, 100% - 6.25rem);
-  /* max-width: 100ch; */
+  max-width: 150ch;
 }
 
 #resume-content > * {
@@ -183,18 +192,18 @@ button {
   gap: 1.5rem;
   max-width: min(150ch, 100% - 6.25rem);
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, max-content);
 }
 
-#_404-shape {
-  position: absolute;
-}
-
-#_404-shape div,
-#_404-shape div div {
-  position: relative;
+#projects-content a div {
+  height: 100%;
 }
 
 #_404-shape div {
+  position: relative;
+}
+
+#_404-shape > div {
   width: min(50vw, 70vh);
 }
 
@@ -230,22 +239,23 @@ li:not(:last-child) {
   width: 100%;
   box-sizing: border-box;
   padding: 2rem;
-  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
-  /* height: 200px; */
 }
 
 .card > * {
   text-align: center;
+  flex-grow: 0;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.card_image {
-  width: 100%;
-  height: 40%;
-  background-color: white;
+.empty-card {
+  border: 4px dashed var(--gray);
+}
+
+.empty-card > * {
+  display: none;
 }
 
 /* -----Global Styles----- */
@@ -264,7 +274,7 @@ li:not(:last-child) {
 }
 
 .full-screen {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -333,7 +343,6 @@ h2 {
   color: white;
 }
 
-
 .full-fixed-screen {
   padding: 0;
   width: 100vw;
@@ -350,12 +359,26 @@ h2 {
   padding: 3.125rem;
 }
 
-.hide { 
+.hide {
   display: none;
 }
 
 .show {
   display: block;
+}
+
+#motorcycle {
+  transform: scaleX(-1);
+  /* width: 100px; */
+  height: 100px;
+  /* overflow: hidden; */
+}
+
+.move-motorcycle {
+  transition-property: transform;
+  transition-duration: 4s;
+  /* background-color: blue; */
+  transform: scaleX(-1) translateX(-400px) !important;
 }
 
 /*Components*/
@@ -397,6 +420,6 @@ h2 {
   }
 
   #projects-content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }

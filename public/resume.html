@@ -8,75 +8,105 @@
     <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
 
     <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8KMZSJB948"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8KMZSJB948");
+    </script>
   </head>
 
   <body>
     <nav class="text-subtitle">
-      <button onclick="showNav()"><span></span><span></span><span></span></button>
+      <button onclick="showNav()">
+        <span></span><span></span><span></span>
+      </button>
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
     </nav>
     <h1 class="text-center page-start">Resume</h1>
-    <div id="resume-content" class="grid-container page-end">
+    <div id="resume-content" class="grid-container page-end main-content">
       <div>A Little Bit About Me</div>
       <div>
         <b>Name: Ryan Zipprich</b>
         <p>
-          I am a sophomore at Kansas State University studying computer engineering and minoring in Military Leadership.
-          I enjoy endurance events, swing dancing, and anything with an adrenaline rush. Currently I am working toward
-          creating more personal projects outside my coursework and getting a sport bike. Feel free to reach out to me:
+          I am a junior at Kansas State University studying computer engineering
+          and minoring in Military Leadership. I enjoy lifting, swing dancing,
+          and riding my motorcycle. Feel free to reach out to me:
           ryan.zipprich@gmail.com.
         </p>
       </div>
       <div>Work Experience</div>
       <div class="resume-entries">
         <div>
-          <b>Electronics Design Laboratory, Manhattan KS</b> - <em>Student Intern</em><br />April 2023 - Present
+          <b>Electronics Design Laboratory, Manhattan KS</b> -
+          <em>Student Intern</em><br />April 2023 - Present
           <ul>
             <li>
-              Using Altium to create PCBs and writing Python to automate the PCB testing process to ensure quality
-              standards for the board's application in high-energy physics applications at CERN
+              Writing Python to automate the PCB testing process to ensure
+              quality standards for the board's application in high-energy
+              physics applications at CERN
             </li>
           </ul>
         </div>
         <div>
-          <b>KS Army National Guard, Salina KS</b> - <em>Soldier/Cadet</em><br />May 2021 - Present
+          <b>KS Army National Guard, Salina KS</b> - <em>Soldier/Cadet</em
+          ><br />May 2021 - Present
           <ul>
             <li>
-              From September 2021 to the present, I have been attached to the 891st Eng Battalion 226 Co Det 1, a
-              horizontal engineering unit in Salina, KS
+              From September 2021 to June 2023, I have been attached to the
+              891st Eng Battalion 226 Co Det 1, a horizontal engineering unit in
+              Salina, KS
             </li>
             <li>
-              I learn and execute the tasks of different a heavy equipment operator and shadow the platoon’s leadership
+              I learn and execute the tasks of different a heavy equipment
+              operator and shadow the platoon’s leadership
             </li>
           </ul>
         </div>
         <div>
-          <b>Ideatek Telcom, Buhler KS</b> - <em>Operations Intern</em><br />Summer of 2021 & 2022
+          <b>Ideatek Telcom, Buhler KS</b> - <em>Operations Intern</em
+          ><br />Summer of 2021 & 2022
           <ul>
             <li>
-              Three primary responsibilities: designed fiber optic routes in GIS software, coordinate with local
-              governing bodies for RoW permits, build cost estimates for fiber optic designs
+              Three primary responsibilities: designed fiber optic routes in GIS
+              software, coordinate with local governing bodies for RoW permits,
+              build cost estimates for fiber optic designs
             </li>
             <li>
-              Integrated with the software development team and built an internal tool with HTML, CSS, & JavaScript to
-              export route data from an in-house software to a file format viewable to contractors
+              Integrated with the software development team and built an
+              internal tool with HTML, CSS, & JavaScript to export route data
+              from an in-house software to a file format viewable to contractors
             </li>
           </ul>
         </div>
         <div>
           <b>Other Work Experience:</b>
-          <p>Lifeguard for 2 summers, Medical Center Intern for the summer of 2019</p>
+          <p>
+            Lifeguard for 2 summers, Medical Center Intern for the summer of
+            2019
+          </p>
         </div>
       </div>
       <div>Education</div>
       <div>
         <b>Kansas State University, Manhattan KS</b> -
-        <em>B.S. in Computer Engineering, Minor in Military Leadership</em><br />August 2021 - December 2025
+        <em>B.S. in Computer Engineering, Minor in Military Leadership</em
+        ><br />August 2021 - December 2025
         <ul>
           <li>4.0 GPA, Dean's list</li>
-          <li>Familiarity with HTML, CSS, JavaScript, Python, C, and Verilog.</li>
+          <li>
+            Familiarity with HTML, CSS, JavaScript, Python, C, and Verilog.
+          </li>
         </ul>
       </div>
 
@@ -84,8 +114,14 @@
       <div>
         <b>ROTC</b>
         <ul>
-          <li>Recondo: Instructor to other cadets teaching dimsounted infantry tactics</li>
-          <li>Master of Fitness: Help organize the physical training of the Wildcat BTN</li>
+          <li>
+            Recondo: Instructor to other cadets teaching dimsounted infantry
+            tactics
+          </li>
+          <li>
+            Master of Fitness: Help organize the physical training of the
+            Wildcat BTN
+          </li>
         </ul>
         <b>Other</b>
         <ul>
@@ -97,8 +133,14 @@
     </div>
 
     <div id="resume-shape" class="circle blue">
-      <div class="circle yellow" style="width: 63.9%; top: 44.1%; left: 33.9%"></div>
-      <img src="assets/pictures/Unicycle Dare.jpg" alt="Ryan riding a unicycle in the middle of the street" />
+      <div
+        class="circle yellow"
+        style="width: 63.9%; top: 44.1%; left: 33.9%"
+      ></div>
+      <img
+        src="assets/pictures/Unicycle Dare.jpg"
+        alt="Ryan riding a unicycle in the middle of the street"
+      />
     </div>
 
     <script src="./script.js"></script>

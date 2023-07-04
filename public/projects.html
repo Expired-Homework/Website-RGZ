@@ -9,64 +9,84 @@
     <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
 
     <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8KMZSJB948"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8KMZSJB948");
+    </script>
   </head>
   <body>
     <nav class="text-subtitle">
-      <button onclick="showNav()"><span></span><span></span><span></span></button>
+      <button onclick="showNav()">
+        <span></span><span></span><span></span>
+      </button>
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
     </nav>
     <div class="main-content">
-          <h1 class="text-center page-start">Projects</h1>
-    <div id="projects-content">
-      <a href="randomQuotes.html">
-        <div class="card blue">
-          <div class="card_image"></div>
-          <h2>Random Quotes</h2>
-          <p>Generate a random quote each day. Pulls the quote from a server with a MySQL DB and Node.js.</p>
+      <h1 class="text-center page-start">Projects</h1>
+      <div id="projects-content">
+        <a href="randomQuotes.html">
+          <div class="card blue">
+            <h2>Random Quotes</h2>
+            <p>
+              Generate a random quote each day. Pulls the quote from a realtime
+              Firebase DB.
+            </p>
+          </div>
+        </a>
+        <a href="formSubmission.html">
+          <div class="card gray">
+            <h2>Contact Form</h2>
+            <p>
+              Tell me how bad this website is in a form. The results will get
+              emailed to me.
+            </p>
+          </div>
+        </a>
+        <a href="./404.html">
+          <div class="card light-brown">
+            <h2>Animation</h2>
+            <p>Playground for CSS animation and sound playing.</p>
+          </div>
+        </a>
+        <!-- Blue -->
+        <div class="empty-card">
+          <h2>Project Title</h2>
+          <p>Project description goes here</p>
         </div>
-      </a>
-      <a href="formSubmission.html">
-        <div class="card gray">
-          <div class="card_image"></div>
-          <h2>Form Submission</h2>
-          <p>Tell me how bad this website is in a form. The results will get emailed to me.</p>
+        <!-- Yellow -->
+        <div class="empty-card">
+          <h2>Project Title</h2>
+          <p>Project description goes here</p>
         </div>
-      </a>
-      <div class="card light-brown">
-        <div class="card_image"></div>
-        <h2>Project Title</h2>
-        <p>Project description goes here</p>
-      </div>
-      <div class="card blue">
-        <div class="card_image"></div>
-        <h2>Project Title</h2>
-        <p>Project description goes here</p>
-      </div>
-      <div class="card yellow">
-        <div class="card_image"></div>
-        <h2>Project Title</h2>
-        <p>Project description goes here</p>
-      </div>
-      <div class="card light-brown">
-        <div class="card_image"></div>
-        <h2>Project Title</h2>
-        <p>Project description goes here</p>
-      </div>
-      <div class="card gray">
-        <div class="card_image"></div>
-        <h2>Project Title</h2>
-        <p>Project description goes here</p>
-      </div>
-      <div class="card gray">
-        <div class="card_image"></div>
-        <h2>Project Title</h2>
-        <p>Project description goes here</p>
+        <!-- Light-Brown -->
+        <div class="empty-card">
+          <h2>Project Title</h2>
+          <p>Project description goes here</p>
+        </div>
+        <!-- Gray -->
+        <div class="empty-card">
+          <h2>Project Title</h2>
+          <p>Project description goes here</p>
+        </div>
+        <!-- Gray -->
+        <div class="empty-card">
+          <h2>Project Title</h2>
+          <p>Project description goes here</p>
+        </div>
       </div>
     </div>
-    </div>
-
 
     <script src="script.js"></script>
   </body>

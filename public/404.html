@@ -8,31 +8,68 @@
 
     <link rel="icon" href="assets/icons/bitmoji/sad.ico" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8KMZSJB948"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8KMZSJB948");
+    </script>
   </head>
   <body>
     <nav class="text-subtitle">
+      <button onclick="showNav()">
+        <span></span><span></span><span></span>
+      </button>
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
     </nav>
-    <div class="full-screen flex-container">
+    <div class="full-screen flex-container main-content">
       <div id="_404-shape">
         <div class="blue flex-container circle">
           <!-- Adjusting off of left and top for all shapes would have been better/more consistent-->
-          <div class="light-brown circle" style="width: 40.4%; top: -6.1%; right: 0%"></div>
-          <div class="blue circle" style="width: 4.4%; top: 3.2%; right: -10.4%"></div>
-          <div class="gray circle" style="width: 21.1%; top: 21.1%; left: -8.5%"></div>
-          <div class="gray circle" style="width: 25.2%; top: 22.3%; right: -7.9%"></div>
-          <div class="brown circle" style="width: 34.3%; top: 63.1%; left: 25.3%"></div>
-          <div class="yellow circle" style="width: 24.6%; top: 66.8%; left: 50.1%"></div>
+          <div
+            class="light-brown circle"
+            style="width: 40.4%; top: -6.1%; right: 0%"
+          ></div>
+          <div
+            class="blue circle"
+            style="width: 4.4%; top: 3.2%; right: -10.4%"
+          ></div>
+          <div
+            class="gray circle"
+            style="width: 21.1%; top: 21.1%; left: -8.5%"
+          ></div>
+          <div
+            class="gray circle"
+            style="width: 25.2%; top: 22.3%; right: -7.9%"
+          ></div>
+          <div
+            class="brown circle"
+            style="width: 34.3%; top: 63.1%; left: 25.3%"
+          ></div>
+          <div
+            class="yellow circle"
+            style="width: 24.6%; top: 66.8%; left: 50.1%"
+          ></div>
           <div class="text-center" id="_404-error-box">
             <h1>404 Error</h1>
             <h2>
-              Oops the page you are looking for does not exist or has changed locations. Sorry for the inconvenience
+              Oops the page you are looking for does not exist or has changed
+              locations. Sorry for the inconvenience
             </h2>
           </div>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
