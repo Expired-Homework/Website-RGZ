@@ -1,4 +1,4 @@
-notesToSelf
+private-notes/**
 .vscode
 
 # Everything below this comment was added automatically by firebase
