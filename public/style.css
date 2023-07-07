@@ -367,21 +367,13 @@ h2 {
   display: block;
 }
 
-#motorcycle {
-  transform: scaleX(-1);
-  /* width: 100px; */
-  height: 100px;
-  /* overflow: hidden; */
+#animation-content > div {
+  box-sizing: border-box;
+  width: 100% - 2rem;
+  padding-block: 1rem;
+  margin: 1rem;
+  border: black 0.125rem solid;
 }
-
-.move-motorcycle {
-  transition-property: transform;
-  transition-duration: 4s;
-  /* background-color: blue; */
-  transform: scaleX(-1) translateX(-400px) !important;
-}
-
-/*Components*/
 
 /* -----Media Queries----- */
 @media (max-width: 700px), (max-height: 550px) {

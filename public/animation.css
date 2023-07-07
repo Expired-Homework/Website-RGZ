@@ -1,0 +1,51 @@
+#motorcycle {
+  height: 100px;
+}
+
+.move-motorcycle {
+  /* transition-property: transform; */
+  /* transition-duration: 4s; */
+  /* transform: scaleX(-1) translateX(-400px) !important; */
+  animation: startMoving 1s forwards ease-in, startWheelie 1s forwards 1s linear,
+    holdWheelie 1s forwards 2s linear, endWheelie 1s forwards 3s linear;
+}
+
+.park-motorcycle {
+  transform: none;
+}
+
+@keyframes startMoving {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes startWheelie {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(600px) translateY(-30px) rotate(-45deg);
+  }
+}
+
+@keyframes holdWheelie {
+  from {
+    transform: translateX(600px) translateY(-30px) rotate(-45deg);
+  }
+  to {
+    transform: translateX(900px) translateY(-30px) rotate(-45deg);
+  }
+}
+
+@keyframes endWheelie {
+  from {
+    transform: translateX(900px) translateY(-30px) rotate(-45deg);
+  }
+  to {
+    transform: translateX(1200px);
+  }
+}
