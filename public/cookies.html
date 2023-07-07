@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1" />
+    <title>Cookies - RGZ</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8KMZSJB948"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8KMZSJB948");
+    </script>
+  </head>
+  <body>
+    <nav class="text-subtitle">
+      <button onclick="showNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+    <div class="main-content" style="height: 100vh">
+      <h1 class="text-center page-start">Animation</h1>
+      <div class="flex-container">
+        <button class="text-subtitle" onclick="alert(document.cookie)">
+          Display Cookies
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
