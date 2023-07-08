@@ -26,8 +26,12 @@
 
   <body>
     <nav class="text-subtitle">
-      <button onclick="showNav()">
+      <button onclick="showNav()" id="menu">
         <span></span><span></span><span></span>
+      </button>
+      <button onclick="hideNav()" id="close-menu">
+        <div></div>
+        <div></div>
       </button>
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
@@ -143,6 +147,6 @@
       />
     </div>
 
-    <script src="./script.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>

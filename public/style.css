@@ -25,6 +25,8 @@ nav {
   z-index: 2;
   top: 3.125rem;
   padding-inline: 3.125rem;
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -42,25 +44,55 @@ nav a:hover {
 }
 
 nav button {
-  display: none;
-  width: 2rem;
-  aspect-ratio: 2rem;
   border: none;
   background: none;
   padding: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+#menu {
+  display: none;
+  width: 2rem;
+  aspect-ratio: 1;
   /* display: flex; */
   flex-direction: column;
   gap: 0.25rem;
 }
 
-nav button span {
+#menu span {
   width: 100%;
   height: 0.5rem;
   background: black;
-  width: 100%;
   min-height: 0.5rem;
   background: black;
   border-radius: 0.25rem;
+}
+
+#close-menu {
+  position: fixed;
+  width: 2rem;
+  top: 3.125rem;
+  right: 3.125rem;
+  display: none;
+  flex-grow: 0;
+}
+
+#close-menu > div {
+  position: absolute;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+#close-menu > div:nth-child(1) {
+  background: black;
+  transform: translateY(-0.25rem) rotate(-45deg);
+}
+
+#close-menu > div:nth-child(2) {
+  background: black;
+  transform: translateY(-0.25rem) rotate(45deg);
 }
 
 a {
@@ -343,28 +375,32 @@ h2 {
   color: white;
 }
 
-.full-fixed-screen {
+.full-nav-screen {
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100vh - 3.125rem;
   position: absolute;
-  top: 0px;
+  top: 3.125rem;
   left: 0px;
   background: white;
   display: flex;
   flex-direction: column;
 }
 
-.full-fixed-screen > * {
+.full-nav-screen > a {
   padding: 3.125rem;
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
-.show {
-  display: block;
+.show-block {
+  display: block !important;
+}
+
+.show-inline-block {
+  display: inline-block !important;
 }
 
 #animation-content > div {
@@ -407,7 +443,7 @@ h2 {
     display: none;
   }
 
-  nav button {
+  #menu {
     display: flex;
   }
 
