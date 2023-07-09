@@ -399,17 +399,21 @@ h2 {
 .full-nav-screen {
   padding: 0;
   width: 100vw;
-  height: 100vh - 3.125rem;
+  height: 100vh;
+  top: 0px;
   position: absolute;
-  top: 3.125rem;
   left: 0px;
-  background: white;
+  background: var(--bg-color);
   display: flex;
   flex-direction: column;
 }
 
 .full-nav-screen > a {
   padding: 3.125rem;
+}
+
+.full-nav-screen > a:first-of-type {
+  margin-top: 3.125rem;
 }
 
 .hide {
