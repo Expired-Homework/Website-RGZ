@@ -7,17 +7,30 @@
   --brown: #a17f4a;
   --light-brown: #dda44e;
 
+  --dark: #22252b;
+  --dark-midtone: #42454b;
+  /* Light Mode */
+  --bg-color: white;
+  --text-color: black;
+  --midtone: var(--gray);
+  /* Dark Mode */
+  /* --bg-color: var(--dark);
+  --text-color: white;
+  --midtone: var(--dark-midtone); */
+
   /* Fonts */
   --ff-primary: "Open Sans", sans-serif;
 
-  /*font-family: 'Open Sans', sans-serif;
-  font-family: 'Raleway', sans-serif;*/
+  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
   font-family: var(--ff-primary);
   margin: 0;
   box-sizing: border-box;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 nav {
@@ -32,7 +45,6 @@ nav {
 nav a {
   box-sizing: border-box;
   display: inline-block;
-  color: black;
   text-decoration: none;
   min-width: 6.25rem;
   text-align: center;
@@ -40,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--gray);
+  background-color: var(--midtone);
 }
 
 nav button {
@@ -96,7 +108,7 @@ nav button {
 }
 
 a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -181,7 +193,7 @@ textarea {
 }
 
 #resume-content > * {
-  background: var(--gray);
+  background: var(--midtone);
   padding: 1.25rem;
 }
 
@@ -283,7 +295,7 @@ li:not(:last-child) {
 }
 
 .empty-card {
-  border: 4px dashed var(--gray);
+  border: 4px dashed var(--midtone);
 }
 
 .empty-card > * {
@@ -374,6 +386,15 @@ h2 {
 .text-white {
   color: white;
 }
+.text-black {
+  color: black;
+}
+
+.dark-mode {
+  --bg-color: var(--dark);
+  --text-color: white;
+  --midtone: var(--dark-midtone);
+}
 
 .full-nav-screen {
   padding: 0;
@@ -409,6 +430,26 @@ h2 {
   padding-block: 1rem;
   margin: 1rem;
   border: black 0.125rem solid;
+}
+
+#dark-mode-toggle {
+  box-sizing: content-box;
+  width: 2rem;
+  height: 2rem;
+  padding: 0px;
+  position: absolute;
+  border: none;
+  background: var(--bg-color);
+  border-radius: 50%;
+  top: 3.125rem;
+  right: 3.125rem;
+  padding: 0.5rem;
+}
+
+#dark-mode-toggle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* -----Media Queries----- */
