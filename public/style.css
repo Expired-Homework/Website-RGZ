@@ -1,4 +1,6 @@
-/* -----Variable Declaration----- */
+/* ---------------
+   Variable Declaration
+   --------------- */
 :root {
   /* Colors */
   --blue: #4e6edd;
@@ -7,6 +9,8 @@
   --brown: #a17f4a;
   --light-brown: #dda44e;
 
+  --green: #51af3a;
+
   --dark: #22252b;
   --dark-midtone: #42454b;
   /* Light Mode */
@@ -14,9 +18,11 @@
   --text-color: black;
   --midtone: var(--gray);
   /* Dark Mode */
-  /* --bg-color: var(--dark);
+  /*
+  --bg-color: var(--dark);
   --text-color: white;
-  --midtone: var(--dark-midtone); */
+  --midtone: var(--dark-midtone);
+  */
 
   /* Fonts */
   --ff-primary: "Open Sans", sans-serif;
@@ -25,6 +31,9 @@
   font-family: "Raleway", sans-serif;
 }
 
+/* --------------------------------------------------
+   General Styling
+   -------------------------------------------------- */
 body {
   font-family: var(--ff-primary);
   margin: 0;
@@ -63,6 +72,33 @@ nav button {
   height: 2rem;
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+button {
+  padding: 1rem;
+  background: white;
+}
+
+form {
+  padding: 2rem;
+  margin: 0 2rem;
+  display: grid;
+}
+
+textarea {
+  font-family: var(--ff-primary);
+}
+/* Implemented for resume page */
+li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------
+   All Pages
+   -------------------------------------------------- */
 #menu {
   display: none;
   width: 2rem;
@@ -107,29 +143,9 @@ nav button {
   transform: translateY(-0.25rem) rotate(45deg);
 }
 
-a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-button {
-  padding: 1rem;
-}
-
-form {
-  padding: 2rem;
-  margin: 0 2rem;
-  display: grid;
-}
-
-textarea {
-  font-family: var(--ff-primary);
-}
-
-#index-content {
-  justify-content: space-between;
-}
-
+/* --------------------------------------------------
+   Home Page
+   -------------------------------------------------- */
 #index-content > * {
   height: 100%;
 }
@@ -180,13 +196,14 @@ textarea {
   border: solid 2px;
 }
 
+/* --------------------------------------------------
+   Resume Page
+   -------------------------------------------------- */
 #resume-content {
-  /* Was here for when this was a flexbox
-  align-items: start; */
   box-sizing: border-box;
   grid-template-columns: 3fr 7fr;
   padding-inline: 3.125rem;
-  margin: 0 auto;
+  margin-inline: auto;
   column-gap: 2.5rem;
   justify-content: center;
   max-width: 150ch;
@@ -230,53 +247,9 @@ textarea {
   left: 19.7%;
 }
 
-#projects-content {
-  display: grid;
-  margin: 0 auto;
-  gap: 1.5rem;
-  max-width: min(150ch, 100% - 6.25rem);
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(100px, max-content);
-}
-
-#projects-content a div {
-  height: 100%;
-}
-
-#_404-shape div {
-  position: relative;
-}
-
-#_404-shape > div {
-  width: min(50vw, 70vh);
-}
-
-#_404-shape div div {
-  position: absolute;
-}
-
-#_404-error-box {
-  position: relative;
-  aspect-ratio: unset;
-  height: fit-content;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#_404-error-box * {
-  padding: 0px 20px;
-}
-
-/* -----Specific Styles----- */
-
 .resume-entries {
   display: grid;
   gap: 2rem;
-}
-
-li:not(:last-child) {
-  margin-bottom: 1rem;
 }
 
 .card {
@@ -301,8 +274,74 @@ li:not(:last-child) {
 .empty-card > * {
   display: none;
 }
+/* --------------------------------------------------
+   Projects Page
+   -------------------------------------------------- */
+#projects-content {
+  display: grid;
+  margin-inline: auto;
+  gap: 1.5rem;
+  max-width: min(150ch, 100% - 6.25rem);
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(20ch, max-content);
+}
 
-/* -----Global Styles----- */
+#projects-content a div {
+  height: 100%;
+}
+
+/* --------------------------------------------------
+   Animation Page
+   -------------------------------------------------- */
+#animation-content > div {
+  box-sizing: border-box;
+  width: 100% - 2rem;
+  padding-block: 1rem;
+  margin: 1rem;
+  border: black 0.125rem solid;
+}
+
+/* --------------------------------------------------
+   Perfect Pitch Page
+   -------------------------------------------------- */
+#game-buttons {
+  margin-bottom: 2rem;
+}
+
+.game-ctrl {
+  padding: 0.4rem;
+}
+
+/* --------------------------------------------------
+   404 Page
+   -------------------------------------------------- */
+#_404-shape div {
+  position: relative;
+}
+
+#_404-shape > div {
+  width: min(50vw, 70vh);
+}
+
+#_404-shape div div {
+  position: absolute;
+}
+
+#_404-error-box {
+  position: relative;
+  aspect-ratio: unset;
+  height: fit-content;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#_404-error-box * {
+  padding: 0px 20px;
+}
+/* --------------------------------------------------
+   Global Styles
+   -------------------------------------------------- */
 .flex-container {
   display: flex;
   align-items: center;
@@ -311,6 +350,12 @@ li:not(:last-child) {
 
 .flex-vert {
   flex-direction: column;
+  align-items: center;
+}
+
+.space-even {
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .grid-container {
@@ -359,12 +404,16 @@ h2 {
 
 .div-center {
   width: fit-content;
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 .circle {
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+.round {
+  border-radius: 1rem;
 }
 
 /*Colors*/
@@ -382,6 +431,9 @@ h2 {
 }
 .gray {
   background-color: var(--gray);
+}
+.green {
+  background-color: var(--green);
 }
 .text-white {
   color: white;
@@ -428,14 +480,6 @@ h2 {
   display: inline-block !important;
 }
 
-#animation-content > div {
-  box-sizing: border-box;
-  width: 100% - 2rem;
-  padding-block: 1rem;
-  margin: 1rem;
-  border: black 0.125rem solid;
-}
-
 #dark-mode-toggle {
   box-sizing: content-box;
   width: 2rem;
@@ -456,7 +500,9 @@ h2 {
   object-fit: contain;
 }
 
-/* -----Media Queries----- */
+/* --------------------------------------------------
+   Media Queries
+   -------------------------------------------------- */
 @media (max-width: 700px), (max-height: 550px) {
   #index-content {
     flex-direction: column;
