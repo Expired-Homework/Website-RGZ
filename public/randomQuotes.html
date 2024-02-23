@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,10 +25,15 @@
   </head>
   <body>
     <nav class="text-subtitle">
-      <button onclick="showNav()" id="menu">
+      <button onclick="showNav()" id="menu" type="button" title="Show Menu">
         <span></span><span></span><span></span>
       </button>
-      <button onclick="hideNav()" id="close-menu">
+      <button
+        onclick="hideNav()"
+        id="close-menu"
+        type="button"
+        title="Close Menu"
+      >
         <div></div>
         <div></div>
       </button>
@@ -36,12 +41,12 @@
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
     </nav>
-    <button id="dark-mode-toggle">
+    <button id="dark-mode-toggle" type="button" title="Dark Mode Toggle">
       <img src="assets/icons/night-mode.png" alt="" />
     </button>
     <div class="main-content flex-container flex-vert" style="height: 100vh">
       <h1 class="text-center page-start">Random Quotes</h1>
-      <div class="flex-container" style="flex-grow: 1">
+      <div class="flex-container align-center" style="flex-grow: 1">
         <div
           class="flex-container flex-vert blue text-white"
           style="flex-grow: 0; flex-shrink: 1; padding: 2rem; margin: 0 2rem"
