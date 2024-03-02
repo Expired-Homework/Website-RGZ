@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Random Quotes - RGZ</title>
+    <title>Home - RGZ</title>
 
     <base href="../index.html" />
     <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="projects/prism.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,6 +32,7 @@
       gtag("config", "G-8KMZSJB948");
     </script>
   </head>
+
   <body>
     <nav class="text-subtitle">
       <button onclick="showNav()" id="menu" type="button" title="Show Menu">
@@ -52,27 +54,24 @@
     <button id="dark-mode-toggle" type="button" title="Dark Mode Toggle">
       <img src="assets/icons/night-mode.png" alt="" />
     </button>
-    <div class="main-content flex-container flex-vert" style="height: 100vh">
-      <h1 class="text-center page-start">Random Quotes</h1>
-      <div class="flex-container align-center" style="flex-grow: 1">
-        <div
-          class="flex-container flex-vert blue text-white"
-          style="flex-grow: 0; flex-shrink: 1; padding: 2rem; margin: 0 2rem"
-        >
-          <h2
-            class="text-center"
-            id="random-quote"
-            style="max-width: 50ch; min-width: 25ch"
-          >
-            _
-          </h2>
-          <button onclick="NewQuote()" class="text-subtitle">New Quote</button>
-        </div>
-      </div>
+    <h1 class="text-center page-start">Animation</h1>
+    <pre>
+      <code class="language-js">
+        if(user.cookies.agreed) {
+          CollectData(user)
+        } else {
+          CollectData(user)
+        }
+      </code>
+    </pre>
+    <div class="flex-container">
+      <button class="text-subtitle" onclick="alert(document.cookie)">
+        Display Cookies
+      </button>
     </div>
 
     <script src="darkMode.js"></script>
     <script src="nav.js"></script>
-    <script type="module" src="projects/randomQuotes.js"></script>
+    <script src="projects/prism.js"></script>
   </body>
 </html>

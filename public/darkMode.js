@@ -5,7 +5,8 @@ const darkModeIcon = document.querySelector("#dark-mode-toggle > img");
 const enableDarkMode = () => {
   document.body.classList.add("dark-mode");
   localStorage.setItem("darkMode", "enabled");
-  darkModeIcon.src = document.head.baseURI + "/../assets/icons/night-mode.png";
+  darkModeIcon.src =
+    document.head.baseURI + "/../assets/icons/night-mode-light.png";
 };
 
 const disableDarkMode = () => {

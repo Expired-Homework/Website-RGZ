@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Random Quotes - RGZ</title>
+    <title>Home - RGZ</title>
 
-    <base href="../index.html" />
+    <base href="index.html" />
     <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
     <link rel="stylesheet" href="style.css" />
 
@@ -31,6 +31,7 @@
       gtag("config", "G-8KMZSJB948");
     </script>
   </head>
+
   <body>
     <nav class="text-subtitle">
       <button onclick="showNav()" id="menu" type="button" title="Show Menu">
@@ -52,27 +53,9 @@
     <button id="dark-mode-toggle" type="button" title="Dark Mode Toggle">
       <img src="assets/icons/night-mode.png" alt="" />
     </button>
-    <div class="main-content flex-container flex-vert" style="height: 100vh">
-      <h1 class="text-center page-start">Random Quotes</h1>
-      <div class="flex-container align-center" style="flex-grow: 1">
-        <div
-          class="flex-container flex-vert blue text-white"
-          style="flex-grow: 0; flex-shrink: 1; padding: 2rem; margin: 0 2rem"
-        >
-          <h2
-            class="text-center"
-            id="random-quote"
-            style="max-width: 50ch; min-width: 25ch"
-          >
-            _
-          </h2>
-          <button onclick="NewQuote()" class="text-subtitle">New Quote</button>
-        </div>
-      </div>
-    </div>
+    <div class="flex-container full-screen"></div>
 
     <script src="darkMode.js"></script>
     <script src="nav.js"></script>
-    <script type="module" src="projects/randomQuotes.js"></script>
   </body>
 </html>
