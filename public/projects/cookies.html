@@ -9,6 +9,7 @@
     <base href="../index.html" />
     <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="projects/prism.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,7 +55,16 @@
       <img src="assets/icons/night-mode.png" alt="" />
     </button>
     <h1 class="text-center page-start">Animation</h1>
-    <div class="flex-container flex-vert">
+    <pre>
+      <code class="language-js">
+        if(user.cookies.agreed) {
+          CollectData(user)
+        } else {
+          CollectData(user)
+        }
+      </code>
+    </pre>
+    <div class="flex-container">
       <button class="text-subtitle" onclick="alert(document.cookie)">
         Display Cookies
       </button>
@@ -62,5 +72,6 @@
 
     <script src="darkMode.js"></script>
     <script src="nav.js"></script>
+    <script src="projects/prism.js"></script>
   </body>
 </html>
