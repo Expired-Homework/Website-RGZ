@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Form Submission - RGZ</title>
+
+    <base href="../index.html" />
+    <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8KMZSJB948"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8KMZSJB948");
+    </script>
+  </head>
+  <body>
+    <nav class="text-subtitle">
+      <button onclick="showNav()" id="menu" type="button" title="Show Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <button
+        onclick="hideNav()"
+        id="close-menu"
+        type="button"
+        title="Close Menu"
+      >
+        <div></div>
+        <div></div>
+      </button>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+    <button id="dark-mode-toggle" type="button" title="Dark Mode Toggle">
+      <img src="assets/icons/night-mode.png" alt="" />
+    </button>
+    <div class="main-content flex-container flex-vert" style="height: 100vh">
+      <div class="flex-container flex-vert align-center" id="gameMenu">
+        <h1>Perfect Pitch Game</h1>
+        <button class="green text-body" onclick="startGame()">
+          <b>Start</b>
+        </button>
+      </div>
+      <div class="hide" id="game">
+        <h1 class="text-center">Select the Correct Tone</h1>
+        <div class="flex-container space-even" id="game-buttons">
+          <button type="button" onclick="checkAnswer(0)">A</button
+          ><button type="button" onclick="checkAnswer(1)">B</button
+          ><button type="button" onclick="checkAnswer(2)">C</button
+          ><button type="button" onclick="checkAnswer(3)">D</button
+          ><button type="button" onclick="checkAnswer(4)">E</button
+          ><button type="button" onclick="checkAnswer(5)">F</button
+          ><button type="button" onclick="checkAnswer(6)">G</button>
+        </div>
+        <div class="flex-container space-even text-body">
+          <p id="timer">Timer: 60s</p>
+          <p id="score">Score: 0</p>
+          <button
+            class="round light-brown game-ctrl"
+            type="button"
+            onclick="repeatNote()"
+          >
+            Repeat
+          </button>
+          <button class="round game-ctrl" type="button" onclick="quitGame()">
+            Quit
+          </button>
+          <button
+            class="round game-ctrl green"
+            type="button"
+            onclick="startGame()"
+          >
+            Play Again
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="darkMode.js"></script>
+    <script src="nav.js"></script>
+    <script src="projects/perfectPitch.js"></script>
+  </body>
+</html>

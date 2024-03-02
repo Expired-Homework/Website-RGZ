@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,13 +26,25 @@
 
   <body>
     <nav class="text-subtitle">
-      <button onclick="showNav()">
+      <button onclick="showNav()" id="menu" type="button" title="Show Menu">
         <span></span><span></span><span></span>
+      </button>
+      <button
+        onclick="hideNav()"
+        id="close-menu"
+        type="button"
+        title="Close Menu"
+      >
+        <div></div>
+        <div></div>
       </button>
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
     </nav>
+    <button id="dark-mode-toggle" type="button" title="Dark Mode Toggle">
+      <img src="assets/icons/night-mode.png" alt="" />
+    </button>
     <h1 class="text-center page-start">Resume</h1>
     <div id="resume-content" class="grid-container page-end main-content">
       <div>A Little Bit About Me</div>
@@ -143,6 +155,7 @@
       />
     </div>
 
-    <script src="./script.js"></script>
+    <script src="darkMode.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>

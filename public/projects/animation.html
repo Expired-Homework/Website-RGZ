@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
 
     <link rel="icon" href="assets/icons/bitmoji/straight.ico" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animation.css" />
+    <link rel="stylesheet" href="projects/animation.css" />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -26,13 +26,25 @@
   </head>
   <body>
     <nav class="text-subtitle">
-      <button onclick="showNav()">
+      <button onclick="showNav()" id="menu" type="button" title="Show Menu">
         <span></span><span></span><span></span>
+      </button>
+      <button
+        onclick="hideNav()"
+        id="close-menu"
+        type="button"
+        title="Close Menu"
+      >
+        <div></div>
+        <div></div>
       </button>
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
     </nav>
+    <button id="dark-mode-toggle" type="button" title="Dark Mode Toggle">
+      <img src="assets/icons/night-mode.png" alt="" />
+    </button>
     <div class="main-content" style="height: 100vh" id="animation-content">
       <h1 class="text-center page-start">Animation</h1>
       <div class="flex-container">
@@ -47,6 +59,8 @@
         />
       </div>
     </div>
-    <script src="animation.js"></script>
+    <script src="darkMode.js"></script>
+    <script src="projects/animation.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>

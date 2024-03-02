@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,17 +26,29 @@
   </head>
   <body>
     <nav class="text-subtitle">
-      <button onclick="showNav()">
+      <button onclick="showNav()" id="menu" type="button" title="Show Menu">
         <span></span><span></span><span></span>
+      </button>
+      <button
+        onclick="hideNav()"
+        id="close-menu"
+        type="button"
+        title="Close Menu"
+      >
+        <div></div>
+        <div></div>
       </button>
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
     </nav>
+    <button id="dark-mode-toggle" type="button" title="Dark Mode Toggle">
+      <img src="assets/icons/night-mode.png" alt="" />
+    </button>
     <div class="main-content">
       <h1 class="text-center page-start">Projects</h1>
-      <div id="projects-content">
-        <a href="randomQuotes.html">
+      <div class="page-end" id="projects-content">
+        <a href="projects/randomQuotes.html">
           <div class="card blue">
             <h2>Random Quotes</h2>
             <p>
@@ -45,8 +57,8 @@
             </p>
           </div>
         </a>
-        <a href="formSubmission.html">
-          <div class="card gray">
+        <a href="projects/formSubmission.html">
+          <div class="card gray text-black">
             <h2>Contact Form</h2>
             <p>
               Tell me how bad this website is in a form. The results will get
@@ -54,17 +66,18 @@
             </p>
           </div>
         </a>
-        <a href="./animation.html">
+        <a href="projects/animation.html">
           <div class="card light-brown">
             <h2>Animation</h2>
             <p>Playground for CSS animation and sound playing.</p>
           </div>
         </a>
-        <!-- Blue -->
-        <div class="empty-card">
-          <h2>Project Title</h2>
-          <p>Project description goes here</p>
-        </div>
+        <a href="projects/perfectPitch.html">
+          <div class="card blue">
+            <h2>Perfect Pitch Game</h2>
+            <p>Training/test to develop perfect pitch</p>
+          </div>
+        </a>
         <!-- Yellow -->
         <div class="empty-card">
           <h2>Project Title</h2>
@@ -88,6 +101,7 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="darkMode.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>
